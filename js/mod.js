@@ -1,8 +1,8 @@
 let modInfo = {
-	name: "The ??? Tree",
-	id: "mymod",
-	author: "nobody",
-	pointsName: "points",
+	name: "The placeholder Tree",
+	id: "Wierdmod",
+	author: "Truewierdo",
+	pointsName: "placeholder",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
@@ -13,8 +13,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "Literally nothing",
+	num: "0.1",
+	name: "small changes",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -43,6 +43,7 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
+	if (hasUpgrade('p', 11)) gain = gain.times(2)
 	return gain
 }
 
